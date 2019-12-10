@@ -9,4 +9,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>test 1234</ion-content>
+<ion-content>
+
+  <ul>
+    <li class="text" *ngFor="let item of items | async">
+      {{item.X}}
+    </li>
+  </ul>
+
+</ion-content>
