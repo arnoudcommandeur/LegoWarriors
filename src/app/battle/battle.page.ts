@@ -10,8 +10,13 @@ import { Observable } from 'rxjs';
 export class BattlePage implements OnInit {
 
   items: Observable<any[]>;
+  list: Observable<any[]>;
+
   constructor(db: AngularFirestore) {
     this.items = db.collection('Warriors').valueChanges();
+
+    this.list = db.collection('Warriors').snapshotChanges();
+    this.list.subscribe(data => console.log('Warrior entered') );
   }
 
   ngOnInit() {
