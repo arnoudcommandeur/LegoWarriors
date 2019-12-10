@@ -22,9 +22,9 @@ export class AppComponent {
       icon: 'list'
     },
     {
-      title: 'Market',
-      url: '/battle',
-      icon: 'battle'
+      title: 'Markt',
+      url: '/markt',
+      icon: 'markt'
     },
     {
       title: 'Inventory',
